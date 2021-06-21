@@ -325,9 +325,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1980005618}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e508feaba1409d64aae2fc3f3002cc02, type: 3}
+  m_Script: {fileID: 11500000, guid: 3e546f6c72c74c64ab19bf1bd39f3dda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pname: ABC
+  age: 20
+  friends:
+  - wef
+  - wvg
+  - afav
 --- !u!4 &1980005620
 Transform:
   m_ObjectHideFlags: 0
