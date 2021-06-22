@@ -330,10 +330,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pname: ABC
   age: 20
+  country: 
   friends:
   - wef
   - wvg
   - afav
+  hobbies:
+  - cricket
+  - shuttle
 --- !u!4 &1980005620
 Transform:
   m_ObjectHideFlags: 0

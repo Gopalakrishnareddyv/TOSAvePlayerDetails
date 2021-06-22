@@ -33,16 +33,16 @@ public class JsonDemo : MonoBehaviour
     void setData()
     {
         string filepath = Application.persistentDataPath + "/MyData.file";
-        
+        //Adding one pair 
         JObject jobj = new JObject();
         jobj.Add("componentName", this.pname);
         jobj.Add("Country", "India");
-
+        //adding pair within that different pairs
         JObject jdataDemo = new JObject();
         jobj.Add("data", jdataDemo);
         jdataDemo.Add("_name", "hds");
         jdataDemo.Add("_curHp", this.age);
-
+        //adding array to one key
         JArray jarraydata = JArray.FromObject(friends);
         jdataDemo.Add("_friends", jarraydata);
 
@@ -65,10 +65,6 @@ public class JsonDemo : MonoBehaviour
         JObject jsonObj = JObject.Parse(data);
         pname = jsonObj["componentName"].Value<string>();
         age = jsonObj["data"]["_curHp"].Value<int>();
-        friends=jsonObj["data"]["_friends"].ToObject<string[]>();
-        print(friends);
-        //friends=jsonObj["data"]["_friends"].ToObject<string[]>();
-        //friend = friends[];
-        //Debug.Log(friends[0]);
+        friends = jsonObj["data"]["_friends"].ToObject<string[]>();
    }
 }
