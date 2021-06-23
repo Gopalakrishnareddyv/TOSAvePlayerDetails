@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MyLocalGuide.unity
     guid: b0be5cc903f77574fba275d0f85d6a15
+  - enabled: 1
+    path: Assets/Scenes/MyPlaceFinder.unity
+    guid: b181d6b8a69878747b83435b257dfdbf
+  - enabled: 1
+    path: Assets/Scenes/DataLoadScene.unity
+    guid: 398daa871db923b4d97db7d8717a601a
   m_configObjects: {}

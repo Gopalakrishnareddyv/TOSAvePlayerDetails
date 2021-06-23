@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ScriptManager : MonoBehaviour
 {
-    [SerializeField] Text lat;
+    [SerializeField] Text lati;
     public Text lon;
     // Start is called before the first frame update
     void Start()
@@ -16,7 +16,7 @@ public class ScriptManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        lat.text = GPSLocation.Latitude.ToString();
+        lati.text = GPSLocation.Latitude.ToString();
         lon.text = GPSLocation.Longitude.ToString();
     }
 }
