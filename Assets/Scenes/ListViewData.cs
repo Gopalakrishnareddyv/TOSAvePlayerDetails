@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class ListViewData : MonoBehaviour
 {
     string url = "https://tools.learningcontainer.com/sample-json.json";
-    string templateName="Template";
+    string templateName = "Template";
     // Start is called before the first frame update
     void Start()
     {
@@ -76,14 +76,31 @@ public class ListViewData : MonoBehaviour
                 GameObject contentHolder = GameObject.FindGameObjectWithTag("content");
                 prefab.transform.parent = contentHolder.transform;
                 Text[] theText = prefab.GetComponentsInChildren<Text>();
-                theText[0].text = root.firstName + root.lastName;
+                //Template
+                theText[0].text = root.firstName + " " + root.lastName;
                 theText[1].text = root.age.ToString();
+                Button button = prefab.GetComponentInChildren<Button>();
+                button.name = i.ToString();
+                double mylat = 16.3543538;
+                double myLon = 80.5354846;
+                string myURL = "https://www.google.com/maps/@" + mylat + "," + myLon;
 
+                AddListener(button, myURL);
+                //TemplateTwo
+                //theText[0].text ="Name : "+ root.firstName +""+ root.lastName;
+                //theText[1].text ="Age : "+ root.age.ToString();
+                //theText[2].text ="Address : "+ root.address.streetAddress+ "\r\n"+"\r\n\t\t\t\t\t" + root.address.city + "\r\n" +  "\r\n\t\t\t\t\t" + root.address.state + "\r\n" +  "\r\n\t\t\t\t\t" + root.address.postalCode;
+                //theText[3].text ="Phone Number : "+ root.phoneNumbers[0].number;
+                
             }
             
 
         }
         
+    }
+    void AddListener(Button button,string url)
+    {
+        button.onClick.AddListener(() => Application.OpenURL(url));
     }
 }
 public class Address
